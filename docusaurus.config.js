@@ -71,8 +71,8 @@ const config = {
 					},
 					{ to: "/blog", label: "博客", position: "left" },
 					{
-						href: "https://github.com/facebook/docusaurus",
-						label: "GitHub",
+						href: "https://bitbucket.org/timel/docusaurus-blog/src/master/",
+						label: "Repo",
 						position: "right",
 					},
 				],
