@@ -1,41 +1,7 @@
-# Website
+# Alicess Blog
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+这是一个基于[Docusauras](https://docusaurus.io/)的个人博客，简单地做了个首页。
 
-### Installation
+![image-20211225203914226](https://gitee.com/fetiss/img_clound/raw/master/img/2021/12/25/73444_image-20211225203914226.png)
 
-```
-$ yarn
-```
-
-### Local Development
-
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+网站的部署使用了Vercel/Netlify。
