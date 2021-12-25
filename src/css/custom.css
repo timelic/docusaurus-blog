@@ -5,6 +5,9 @@
  */
 
 /* You can override the default Infima variables here. */
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
 :root {
 	--ifm-color-primary: #25c2a0;
 	--ifm-color-primary-dark: rgb(33, 175, 144);
@@ -15,7 +18,7 @@
 	--ifm-color-primary-lightest: rgb(146, 224, 208);
 	--ifm-code-font-size: 95%;
 	/* 修改字体 */
-	--ifm-font-family-base: "Fira sans", "Pingfang SC", system-ui, -apple-system,
+	--ifm-font-family-base: "Raleway", "Pingfang SC", system-ui, -apple-system,
 		Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif,
 		BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
 		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -36,11 +39,6 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
 }
 
 /* 这里写一些自定义的样式 */
-
-p,
-a {
-	font-family: ;
-}
 
 /* 字重 */
 .navbar__item {
@@ -70,7 +68,7 @@ body {
 .markdown h1:first-child {
 	--ifm-h1-font-size: 2rem;
 	margin-top: calc(var(--ifm-h1-font-size) / 2);
-	color: #333;
+	/* color: #333; */
 }
 h1,
 h2,
@@ -79,4 +77,50 @@ h4,
 h5,
 h6 {
 	font-family: "Microsoft Yahei";
+}
+
+/* 这里设置首页样式 */
+/* 只是暂时的 因为我还不懂怎么调react */
+/* 主页的标题和副标题 */
+.homepage-title {
+	font-family: "Microsoft Yahei";
+	font-size: 5rem;
+	/* color: #3f3d56; */
+}
+.homepage-subtitle {
+	font-size: 1.5rem;
+	font-weight: bold;
+	/* color: #3f3d56; */
+}
+.homepage-button {
+	display: block !important;
+}
+.homepage-container {
+	display: flex;
+	flex-direction: column;
+	margin: auto 0;
+	/* min-width: 300px; */
+	max-width: 100vw;
+}
+
+.homepage-header {
+	background: none;
+}
+.main-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+/* 这里让主页的标题垂直居中 */
+.main-wrapper {
+	display: flex;
+}
+.main-wrapper > div {
+	flex: 1 0 auto;
+}
+/* 主页的主图 */
+.homepage-image {
+	width: 400px;
+	height: 400px;
 }

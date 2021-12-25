@@ -6,23 +6,28 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 import HomepageFeatures from "../components/HomepageFeatures";
 
+const Svg = require("../../static/img/undraw_docusaurus_mountain.svg").default;
+
 function HomepageHeader() {
 	const { siteConfig } = useDocusaurusContext();
 	return (
-		<header className={clsx("hero hero--primary", styles.heroBanner)}>
-			<div className="container">
-				<h1 className="hero__title">{siteConfig.title}</h1>
-				<p className="hero__subtitle">{siteConfig.tagline}</p>
-				<div className={styles.buttons}>
-					<Link
-						className="button button--secondary button--lg"
-						to="/docs/intro"
-					>
-						Go to docs - notebook ⏱️
-					</Link>
+		<div className="main-container">
+			<header className={clsx("hero homepage-header", styles.heroBanner)}>
+				<div className="container homepage-container">
+					<h1 className="homepage-title">{siteConfig.title}</h1>
+					<p className="homepage-subtitle">{siteConfig.tagline}</p>
+					<div className={clsx("homepage-button", styles.buttons)}>
+						<Link
+							className="button button--secondary"
+							to="/docs/intro"
+						>
+							前往日常记录
+						</Link>
+					</div>
 				</div>
-			</div>
-		</header>
+			</header>
+			<Svg className={clsx("homepage-image", styles.featureSvg)} />
+		</div>
 	);
 }
 
@@ -34,9 +39,9 @@ export default function Home() {
 			description="Description will go into a meta tag in <head />"
 		>
 			<HomepageHeader />
-			<main>
+			{/* <main>
 				<HomepageFeatures />
-			</main>
+			</main> */}
 		</Layout>
 	);
 }

@@ -5,9 +5,9 @@ const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const math = require("remark-math");
 const katex = require("rehype-katex");
-/** @type {import('@docusaurus/types').Config} */
+// /** @type {import('@docusaurus/types').Config} */
 const config = {
-	title: "Alicess web",
+	title: "Alicess Blog",
 	tagline: "使用 Dinosaurs 开发",
 	url: "https://your-docusaurus-test-site.com",
 	baseUrl: "/",
@@ -71,7 +71,7 @@ const config = {
 					},
 					{ to: "/blog", label: "文章", position: "left" },
 					{
-						href: "https://bitbucket.org/timel/docusaurus-blog/src/master/",
+						href: "https://github.com/timelic/docusaurus-blog",
 						label: "Repo",
 						position: "right",
 					},
