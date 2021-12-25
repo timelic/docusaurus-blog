@@ -161,7 +161,7 @@ function MyFooter() {
 			})}
 			style={{ textAlign: "center" }}
 		>
-			Copyright © 2021 Alicess Blog, Inc. Built with Docusaurus.
+			Copyright © 2021 Alicess Blog. Built with Docusaurus.
 		</footer>
 	);
 }
