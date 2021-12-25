@@ -14,6 +14,14 @@
 	--ifm-color-primary-lighter: rgb(102, 212, 189);
 	--ifm-color-primary-lightest: rgb(146, 224, 208);
 	--ifm-code-font-size: 95%;
+	/* 修改字体 */
+	--ifm-font-family-base: "Fira sans", "Pingfang SC", system-ui, -apple-system,
+		Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif,
+		BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	/* 代码字体 */
+	--ifm-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+		"Liberation Mono", "Courier New", "Pingfang SC", monospace;
 }
 
 .docusaurus-highlight-code-line {
@@ -28,10 +36,10 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
 }
 
 /* 这里写一些自定义的样式 */
-/* 修改字体 */
+
 p,
 a {
-	font-family: "Fira sans", "Pingfang SC";
+	font-family: ;
 }
 
 /* 字重 */
@@ -40,7 +48,35 @@ a {
 }
 
 /* 代码 */
-p code {
+code {
+	--ifm-code-padding-horizontal: 5px;
+	background-color: var(--ifm-code-background);
+	/* color: #00a013; */
+	border-radius: 2px;
+	border: 1px solid #ddd;
 	margin: 0 5px;
-	padding: 2px 5px;
+}
+
+pre code {
+	margin: 0;
+}
+
+/* 主体文字大小 */
+body {
+	font-size: 14px;
+}
+
+/* 标题文字大小 */
+.markdown h1:first-child {
+	--ifm-h1-font-size: 2rem;
+	margin-top: calc(var(--ifm-h1-font-size) / 2);
+	color: #333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Microsoft Yahei";
 }

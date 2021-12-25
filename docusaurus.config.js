@@ -69,7 +69,7 @@ const config = {
 						position: "left",
 						label: "记录",
 					},
-					{ to: "/blog", label: "博客", position: "left" },
+					{ to: "/blog", label: "文章", position: "left" },
 					{
 						href: "https://bitbucket.org/timel/docusaurus-blog/src/master/",
 						label: "Repo",

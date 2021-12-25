@@ -1,101 +1,59 @@
 ---
 sidebar_position: 1
+title: 创建 Docusaurus 博客
 ---
 
-# MongoDB
+首先利用命令`npx create-docusaurus@latest [name] [template]`来创建项目。
 
-首先安装`mongodb`库
+接着就会得到这样子的文件结构。
 
 ```
-npm install mongodb --save
+my-website
+├── blog	博客文章
+│   ├── 2019-05-28-hola.md
+│   ├── 2019-05-29-hello-world.md
+│   └── 2020-05-30-welcome.md
+├── docs	普通文章
+│   ├── doc1.md
+│   ├── doc2.md
+│   ├── doc3.md
+│   └── mdx.md
+├── src
+│   ├── css
+│   │   └── custom.css	自定义css
+│   └── pages
+│       ├── styles.module.css
+│       └── index.js	react的博客首页
+├── static
+│   └── img
+├── docusaurus.config.js	修改主题、页头、侧边栏、页脚之类的
+├── package.json
+├── README.md
+├── sidebars.js
+└── yarn.lock
 ```
 
-新建文件夹`config`，文件`mongoDbConnection.js`
+### Docusaurus的命令
 
-```js
-const MongoClient = require("mongodb").MongoClient; //创建数据库
++ `docusaurus start [siteDir]`启动服务器
++ `docusaurus build [siteDir]` 构建生产版本
++ `docusaurus swizzle [siteDir]`  覆盖主题
++ `docusaurus deploy [siteDir]`
++ `docusaurus serve [siteDir]`为构建后的网站启动 web 服务器。
++ `docusaurus clear [siteDir]`清除 Docusaurus 站点在构建时生成的静态资源、缓存、副产品。
++ `docusaurus write-translations [siteDir]`将需要翻译的内容写入 JSON 文件中。
++ `docusaurus write-heading-ids [siteDir] [files]`为 Markdown 文档中的标题显式地添加 id。
 
-const url = "mongodb://localhost:27017";
-const dbName = "myblog"; //数据库名字
-let _db = null; //存放mangodb返回的数据库实例
-```
 
-创建一个异步函数，返回数据库实例
 
-```js
-async function connectDb() {
-	if (!_db) {
-		try {
-			// 如果没有实例就创建一个
-			const client = new MongoClient(url, { useUnifiedTopology: true });
-			await client.connect();
-			_db = await client.db(dbName);
-		} catch (error) {
-			throw "连接到数据库出错";
-		}
-	}
-	return _db;
-}
-```
+#### 服务器配置
 
-导出一个函数，接受名字并返回`collection`
+用在`start`命令
 
-> 在 mongodb 中，**collection 相当于关系型数据库的表，但并不需提前创建，更不需要预先定义字段**
-
-```js
-// 返回一个collection
-exports.getCollection = (collection) => {
-	let _col = null;
-	return async () => {
-		if (!_col) {
-			try {
-				const db = await connectDb();
-				_col = await db.collection(collection);
-			} catch (error) {
-				throw "选择 collection 出错";
-			}
-		}
-		return _col;
-	};
-};
-```
-
-接下来要创建 model
-
-创建`model/post.js`
-
-```js
-// 创建 一个post的collection
-const postCollection = require("../config/mongoDbConnection").getCollection(
-	"postCollection"
-);
-```
-
-保存文章
-
-```js
-exports.save = async (post) => {
-	try {
-		const col = await postCollection();
-		const result = await col.insertOne(post);
-		return result.ops && result.ops[0];
-	} catch (error) {
-		throw "添加文章到数据库出错";
-	}
-};
-```
-
-在路由里面监听
-
-```js
-route.post("/", async (req, res) => {
-	try {
-		// 存放数据到数据库
-		const newPost = await postModel.save(req.body);
-		res.status(201).json(newPost); // 发送状态码201, json返回n
-	} catch (error) {
-		console.error(error);
-		res.status(500).send();
-	}
-});
-```
+| `--port`                      | `3000`      | 指定开发服务器监听的端口。                                   |
+| ----------------------------- | ----------- | ------------------------------------------------------------ |
+| `--host`                      | `localhost` | 指定要使用的主机。例如，如果希望服务器可以从外部访问，则可以使用 `--host 0.0.0.0`。 |
+| `--hot-only`                  | `false`     | 在构建失败的情况下，启用热模块替换而不进行页面刷新的方式作为后备。更多信息请见 [这里](https://webpack.js.org/configuration/dev-server/#devserverhotonly)。 |
+| `--no-open`                   | `false`     | 不要在浏览器中自动打开页面。                                 |
+| `--config`                    | `undefined` | 指向 docusaurus 配置文件的路径，默认为 `[siteDir]/docusaurus.config.js` |
+| `--poll [optionalIntervalMs]` | `false`     | 在文件监视（watching）功能不能工作的环境中，使用文件轮询（polling）而不是监视（watching）的功能实现实时重新加载。 更多信息请见 [这里](https://webpack.js.org/configuration/watch/#watchoptionspoll)。 |
