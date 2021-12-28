@@ -70,6 +70,15 @@ body {
 	margin-top: calc(var(--ifm-h1-font-size) / 2);
 	/* color: #333; */
 }
+
+[class^="blogPostTitle"] {
+	font-size: 2rem !important;
+}
+
+h2 {
+	font-size: 1.75rem !important;
+}
+
 h1,
 h2,
 h3,
@@ -85,12 +94,10 @@ h6 {
 .homepage-title {
 	font-family: "Microsoft Yahei";
 	font-size: 5rem;
-	/* color: #3f3d56; */
 }
 .homepage-subtitle {
 	font-size: 1.5rem;
 	font-weight: bold;
-	/* color: #3f3d56; */
 }
 .homepage-button {
 	display: block !important;
@@ -99,7 +106,6 @@ h6 {
 	display: flex;
 	flex-direction: column;
 	margin: auto 0;
-	/* min-width: 300px; */
 	max-width: 100vw;
 }
 
@@ -123,4 +129,9 @@ h6 {
 .homepage-image {
 	width: 400px;
 	height: 400px;
+}
+
+/* 图片默认圆角 */
+p > img {
+	border-radius: 5px;
 }

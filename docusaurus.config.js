@@ -8,7 +8,7 @@ const katex = require("rehype-katex");
 // /** @type {import('@docusaurus/types').Config} */
 const config = {
 	title: "Alicess Blog",
-	tagline: "使用 Dinosaurs 开发",
+	tagline: "使用 Docusaurus 开发",
 	url: "https://your-docusaurus-test-site.com",
 	baseUrl: "/",
 	onBrokenLinks: "throw",
