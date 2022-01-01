@@ -1,5 +1,4 @@
 ---
-authors: [timel]
 tags: [GraphQL]
 ---
 

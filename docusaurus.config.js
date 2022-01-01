@@ -67,9 +67,9 @@ const config = {
 						type: "doc",
 						docId: "intro",
 						position: "left",
-						label: "记录",
+						label: "Archive",
 					},
-					{ to: "/blog", label: "文章", position: "left" },
+					{ to: "/blog", label: "Posts", position: "left" },
 					{
 						href: "https://github.com/timelic/docusaurus-blog",
 						label: "Repo",

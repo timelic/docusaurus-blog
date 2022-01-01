@@ -1,6 +1,5 @@
 ---
 slug: vue+graphql
-authors: [timel]
 tags: [Vue, GraphQL]
 ---
 
