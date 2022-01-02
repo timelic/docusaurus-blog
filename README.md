@@ -4,7 +4,7 @@
 
 这是一个基于[Docusauras](https://docusaurus.io/)的个人博客，简单地做了个首页。
 
-![image-20211225203914226](https://gitee.com/fetiss/img_clound/raw/master/img/2021/12/25/73444_image-20211225203914226.png)
+[![To47z8.md.png](https://s4.ax1x.com/2022/01/02/To47z8.md.png)](https://imgtu.com/i/To47z8)
 
 ![image-20211228213811642](https://gitee.com/fetiss/img_clound/raw/master/img/2021/12/28/25164_image-20211228213811642.png)
 
