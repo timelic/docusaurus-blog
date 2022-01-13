@@ -135,3 +135,18 @@ h6 {
 p > img {
 	border-radius: 5px;
 }
+
+/* 主页按钮 */
+.homepage-btn {
+	display: inline-block !important;
+}
+
+/* 用来设置图片居中 */
+p + img,
+p > img {
+	display: block;
+	margin: auto;
+}
+p + img {
+	margin-bottom: 20px;
+}

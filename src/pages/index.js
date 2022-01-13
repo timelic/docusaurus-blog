@@ -29,7 +29,9 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-	const { siteConfig } = useDocusaurusContext();
+	const { siteConfig, siteMetadata, globalData } = useDocusaurusContext();
+	// console.log({ siteConfig, siteMetadata, globalData });
+
 	return (
 		// `${siteConfig.title}` 这玩意本来可以是title
 		<Layout title={null} description="Some notes...">
