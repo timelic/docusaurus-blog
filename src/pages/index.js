@@ -8,8 +8,30 @@ import HomepageFeatures from "../components/HomepageFeatures";
 
 const Svg = require("../../static/img/undraw_docusaurus_mountain.svg").default;
 
+function getAllDocs() {
+	const ctx = require.context("../../docs", true);
+	const allPosts = (ctx) => {
+		const blogpostNames = ctx.keys();
+		return blogpostNames.reduce((blogposts, blogpostName, i) => {
+			const module = ctx(blogpostName);
+			if (!module.metadata) return blogposts;
+			const { title, sidebarPosition, permalink } = module.metadata;
+			return [
+				...blogposts,
+				{
+					title,
+					sidebarPosition,
+					permalink,
+				},
+			];
+		}, []);
+	};
+	console.log(allPosts(ctx));
+}
+
 function HomepageHeader() {
 	const { siteConfig } = useDocusaurusContext();
+	getAllDocs();
 	return (
 		<div className="main-container">
 			<header className={clsx("hero homepage-header", styles.heroBanner)}>

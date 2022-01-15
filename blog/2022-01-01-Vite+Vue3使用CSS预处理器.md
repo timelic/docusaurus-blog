@@ -6,6 +6,8 @@ tags: [Vue]
 
 直接安装`npm install sass -D`。
 
+<!--truncate-->
+
 ```css
 <style lang="sass">
 
@@ -36,8 +38,6 @@ export default defineConfig({
 });
 ```
 
-
-
 ### SCSS
 
 依赖：
@@ -65,8 +65,6 @@ export default defineConfig({
 });
 ```
 
-
-
 ### LESS
 
 ```bash
@@ -89,4 +87,3 @@ export default defineConfig({
 	},
 });
 ```
-
