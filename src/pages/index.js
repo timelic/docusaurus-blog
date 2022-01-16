@@ -6,7 +6,8 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 import HomepageFeatures from "../components/HomepageFeatures";
 
-const Svg = require("../../static/img/undraw_docusaurus_mountain.svg").default;
+// const Svg = require("../../static/img/undraw_docusaurus_mountain.svg").default;
+const Svg = require("../../static/img/image2vector (1).svg").default;
 
 function getAllDocs() {
 	const ctx = require.context("../../docs", true);
@@ -27,11 +28,14 @@ function getAllDocs() {
 		}, []);
 	};
 	console.log(allPosts(ctx));
+	return allPosts(ctx);
 }
 
 function HomepageHeader() {
 	const { siteConfig } = useDocusaurusContext();
-	getAllDocs();
+	function toSolutionsPage() {
+		window.location.href = "solutions/两数之和";
+	}
 	return (
 		<div className="main-container">
 			<header className={clsx("hero homepage-header", styles.heroBanner)}>
@@ -43,9 +47,21 @@ function HomepageHeader() {
 							前往最近文章
 						</Link>
 					</div>
+					{/* <ul>
+						{getAllDocs().map((doc) => {
+							return (
+								<li>
+									<a href={doc.permalink}>{doc.title}</a>
+								</li>
+							);
+						})}
+					</ul> */}
 				</div>
 			</header>
-			<Svg className={clsx("homepage-image", styles.featureSvg)} />
+			<Svg
+				className={clsx("homepage-image", styles.featureSvg)}
+				onClick={toSolutionsPage}
+			/>
 		</div>
 	);
 }
@@ -55,12 +71,12 @@ export default function Home() {
 	// console.log({ siteConfig, siteMetadata, globalData });
 
 	return (
-		// `${siteConfig.title}` 这玩意本来可以是title
 		<Layout title={null} description="Some notes...">
 			<HomepageHeader />
 			{/* <main>
 				<HomepageFeatures />
 			</main> */}
 		</Layout>
+		// `${siteConfig.title}` 这玩意本来可以是title
 	);
 }

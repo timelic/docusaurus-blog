@@ -127,8 +127,10 @@ h6 {
 }
 /* 主页的主图 */
 .homepage-image {
-	width: 400px;
-	height: 400px;
+	/* width: 400px; */
+	/* height: 400px; */
+	border-radius: 50%;
+	filter: saturate(1.2);
 }
 
 /* 图片默认圆角 */
