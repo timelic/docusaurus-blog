@@ -86,3 +86,10 @@ plugins: [
 
 
 
+参考资料
+
+[Sidebar | Docusaurus](https://docusaurus.io/docs/sidebar#category-index-convention)
+
+[javascript - Is there a way to have two docs in Docusaurus 2? - Stack Overflow](https://stackoverflow.com/questions/60783595/is-there-a-way-to-have-two-docs-in-docusaurus-2)
+
+[插件 | Docusaurus 中文文档 | Docusaurus 中文网](https://www.docusaurus.cn/docs/using-plugins)

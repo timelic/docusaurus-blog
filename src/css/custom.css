@@ -7,6 +7,7 @@
 /* You can override the default Infima variables here. */
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap");
 
 :root {
 	--ifm-color-primary: #25c2a0;
@@ -25,6 +26,12 @@
 	/* 代码字体 */
 	--ifm-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
 		"Liberation Mono", "Courier New", "Pingfang SC", monospace;
+	/* 主页标题颜色 */
+	--ifm-heading-color: #322e51;
+}
+
+html[data-theme="dark"] {
+	--ifm-heading-color: #eee;
 }
 
 .docusaurus-highlight-code-line {
@@ -93,7 +100,9 @@ h6 {
 /* 主页的标题和副标题 */
 .homepage-title {
 	font-family: "Microsoft Yahei";
-	font-size: 5rem;
+	font-family: "The Nautigal", cursive;
+	font-size: 11rem;
+	line-height: 10rem;
 }
 .homepage-subtitle {
 	font-size: 1.5rem;

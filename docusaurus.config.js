@@ -30,7 +30,7 @@ function insert_spacing(str) {
 }
 
 const config = {
-	title: "Alicess Blog",
+	title: "Alicess",
 	tagline: "使用 Docusaurus 开发",
 	url: "https://your-docusaurus-test-site.com",
 	baseUrl: "/",

@@ -58,9 +58,17 @@ function HomepageHeader() {
 					</ul> */}
 				</div>
 			</header>
-			<Svg
+			{/* <Svg
 				className={clsx("homepage-image", styles.featureSvg)}
 				onClick={toSolutionsPage}
+			/> */}
+			<img
+				src="https://s4.ax1x.com/2022/01/16/7tdnrF.jpg"
+				style={{
+					width: "300px",
+					borderRadius: "50%",
+					marginLeft: "4rem",
+				}}
 			/>
 		</div>
 	);
