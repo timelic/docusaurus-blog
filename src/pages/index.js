@@ -31,11 +31,17 @@ function getAllDocs() {
 	return allPosts(ctx);
 }
 
-function HomepageHeader() {
-	const { siteConfig } = useDocusaurusContext();
-	function toSolutionsPage() {
+// 转到solutions
+let clickedTime = 0;
+function toSolutionsPage() {
+	clickedTime += 1;
+	if (clickedTime >= 5) {
 		window.location.href = "solutions/两数之和";
 	}
+}
+
+function HomepageHeader() {
+	const { siteConfig } = useDocusaurusContext();
 	return (
 		<div className="main-container">
 			<header className={clsx("hero homepage-header", styles.heroBanner)}>
@@ -63,12 +69,9 @@ function HomepageHeader() {
 				onClick={toSolutionsPage}
 			/> */}
 			<img
+				className="homepage-header-image"
 				src="https://s4.ax1x.com/2022/01/16/7tdnrF.jpg"
-				style={{
-					width: "300px",
-					borderRadius: "50%",
-					marginLeft: "4rem",
-				}}
+				onClick={toSolutionsPage}
 			/>
 		</div>
 	);
@@ -76,7 +79,6 @@ function HomepageHeader() {
 
 export default function Home() {
 	const { siteConfig, siteMetadata, globalData } = useDocusaurusContext();
-	// console.log({ siteConfig, siteMetadata, globalData });
 
 	return (
 		<Layout title={null} description="Some notes...">

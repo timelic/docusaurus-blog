@@ -99,11 +99,11 @@ const config = {
 						label: "Archive",
 					},
 					{ to: "/blog", label: "Posts", position: "left" },
-					{
-						to: "/solutions/两数之和",
-						label: "Solutions",
-						position: "left",
-					},
+					// {
+					// 	to: "/solutions/两数之和",
+					// 	label: "Solutions",
+					// 	position: "left",
+					// },
 					{
 						href: "https://github.com/timelic/docusaurus-blog",
 						label: "Repo",
