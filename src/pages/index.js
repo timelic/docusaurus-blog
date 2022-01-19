@@ -6,8 +6,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 import HomepageFeatures from "../components/HomepageFeatures";
 
-// const Svg = require("../../static/img/undraw_docusaurus_mountain.svg").default;
-const Svg = require("../../static/img/image2vector (1).svg").default;
+// const Svg = require("../../static/img/image2vector (1).svg").default;
 
 function getAllDocs() {
 	const ctx = require.context("../../docs", true);
@@ -70,9 +69,15 @@ function HomepageHeader() {
 			/> */}
 			<img
 				className="homepage-header-image"
-				src="https://s4.ax1x.com/2022/01/16/7tdnrF.jpg"
+				src={"https://s4.ax1x.com/2022/01/16/7tdnrF.jpg"}
 				onClick={toSolutionsPage}
 			/>
+			{/* <img
+				className="homepage-header-image"
+				src={require("@site/static/img/homepage/1.jpg").default}
+				onClick={toSolutionsPage}
+			/> */}
+			{/* <img src={require("@site/static/img/docusaurus.png").default} /> */}
 		</div>
 	);
 }

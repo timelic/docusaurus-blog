@@ -147,6 +147,8 @@ h6 {
 	width: 300px;
 	border-radius: 50%;
 	margin-left: 4rem;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 
 /* 图片默认圆角 */

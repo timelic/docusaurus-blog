@@ -92,18 +92,18 @@ const config = {
 					src: "img/logo.svg",
 				},
 				items: [
+					{ to: "/blog", label: "Posts", position: "left" },
 					{
 						type: "doc",
 						docId: "intro",
 						position: "left",
 						label: "Archive",
 					},
-					{ to: "/blog", label: "Posts", position: "left" },
-					// {
-					// 	to: "/solutions/两数之和",
-					// 	label: "Solutions",
-					// 	position: "left",
-					// },
+					{
+						to: "/solutions/两数之和",
+						label: "Solutions",
+						position: "left",
+					},
 					{
 						href: "https://github.com/timelic/docusaurus-blog",
 						label: "Repo",
@@ -172,15 +172,19 @@ const config = {
 				remarkPlugins: [math],
 				rehypePlugins: [katex],
 				sidebarPath: require.resolve("./sidebars.js"),
-				async sidebarItemsGenerator({ docs }) {
-					return docs.map((doc) => {
-						return {
-							type: "doc",
-							id: doc.id,
-							label: `${doc.sidebarPosition} - ${doc.id}`,
-						};
-					});
-				},
+				sidebarCollapsed: false,
+				// async sidebarItemsGenerator({ docs, ...args }) {
+				// 	console.log(docs);
+				// 	console.log(args);
+				// 	return docs.map((doc) => {
+				// 		return {
+				// 			type: "doc",
+				// 			id: doc.id,
+				// 			label: `${doc.sidebarPosition} - ${doc.id}`,
+				// 			sourceDirName: doc.sourceDirName,
+				// 		};
+				// 	});
+				// },
 			},
 		],
 	],
