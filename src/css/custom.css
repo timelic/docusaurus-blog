@@ -28,6 +28,10 @@
 		"Liberation Mono", "Courier New", "Pingfang SC", monospace;
 	/* 主页标题颜色 */
 	--ifm-heading-color: #322e51;
+	/* 基础行高 */
+	--ifm-line-height-base: 1.75;
+	/* 引用块的左边框 */
+	--ifm-blockquote-border-color: var(--ifm-color-primary);
 }
 
 html[data-theme="dark"] {
