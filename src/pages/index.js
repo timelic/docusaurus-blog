@@ -7,7 +7,7 @@ import styles from "./index.module.css";
 import HomepageFeatures from "../components/HomepageFeatures";
 
 // const Svg = require("../../static/img/image2vector (1).svg").default;
-
+const Alicess = require("../../static/img/Alicess.svg").default;
 function getAllDocs() {
 	const ctx = require.context("../../docs", true);
 	const allPosts = (ctx) => {
@@ -30,59 +30,34 @@ function getAllDocs() {
 	return allPosts(ctx);
 }
 
-// 转到solutions
-let clickedTime = 0;
-function toSolutionsPage() {
-	clickedTime += 1;
-	if (clickedTime >= 5) {
-		window.location.href = "solutions/两数之和";
-	}
-}
-
 function HomepageHeader() {
 	const { siteConfig } = useDocusaurusContext();
 	return (
 		<div className="main-container">
 			<header className={clsx("hero homepage-header", styles.heroBanner)}>
 				<div className="container homepage-container">
-					<h1 className="homepage-title">{siteConfig.title}</h1>
+					{/* <h1 className="homepage-title">{siteConfig.title}</h1> */}
+					<Alicess className="homepage-title-alicess" />
+
 					<p className="homepage-subtitle">{siteConfig.tagline}</p>
+
 					<div className={clsx("homepage-button", styles.buttons)}>
 						<Link className="button button--secondary" to="/blog">
 							前往最近文章
 						</Link>
 					</div>
-					{/* <ul>
-						{getAllDocs().map((doc) => {
-							return (
-								<li>
-									<a href={doc.permalink}>{doc.title}</a>
-								</li>
-							);
-						})}
-					</ul> */}
 				</div>
 			</header>
-			{/* <Svg
-				className={clsx("homepage-image", styles.featureSvg)}
-				onClick={toSolutionsPage}
-			/> */}
 			<img
 				className="homepage-header-image"
 				src={"https://s4.ax1x.com/2022/01/16/7tdnrF.jpg"}
-				onClick={toSolutionsPage}
 			/>
-			{/* <img
-				className="homepage-header-image"
-				src={require("@site/static/img/homepage/1.jpg").default}
-				onClick={toSolutionsPage}
-			/> */}
-			{/* <img src={require("@site/static/img/docusaurus.png").default} /> */}
 		</div>
 	);
 }
 
 export default function Home() {
+	// console.log(card);
 	const { siteConfig, siteMetadata, globalData } = useDocusaurusContext();
 
 	return (
