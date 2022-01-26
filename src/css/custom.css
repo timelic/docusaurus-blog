@@ -7,7 +7,7 @@
 /* You can override the default Infima variables here. */
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap"); */
 
 :root {
 	--ifm-color-primary: #25c2a0;
@@ -102,11 +102,25 @@ h6 {
 /* 这里设置首页样式 */
 /* 只是暂时的 因为我还不懂怎么调react */
 /* 主页的标题和副标题 */
-.homepage-title {
+/* .homepage-title {
 	font-family: "Microsoft Yahei";
 	font-family: "The Nautigal", cursive;
 	font-size: 11rem;
 	line-height: 10rem;
+} */
+.homepage-title-alicess {
+	height: 9rem;
+	width: 24rem;
+	margin-bottom: 15px;
+	margin-left: -20px;
+}
+.homepage-title-alicess > g {
+	stroke: rgb(50 46 81) !important ;
+	stroke-width: 0 !important;
+	fill: rgb(50 46 81) !important;
+}
+html[data-theme="dark"] .homepage-title-alicess > g {
+	fill: #eee !important;
 }
 .homepage-subtitle {
 	font-size: 1.5rem;
@@ -150,7 +164,7 @@ h6 {
 .homepage-header-image {
 	width: 300px;
 	border-radius: 50%;
-	margin-left: 4rem;
+	margin-left: 3rem;
 	user-select: none;
 	-webkit-user-drag: none;
 }
